@@ -13,7 +13,7 @@ class Student
     @id = id
   end
   
-    def self.new_from_db(row)
+  def self.new_from_db(row)
     # create a new Student object given a row from the database
     new_student = self.new
     new_student.id = row[0]
@@ -21,6 +21,9 @@ class Student
     new_student.grade = row[2]
     return new_student
   end
+  
+  def self.create(name:, grade:)
+    new_student = self.new(name, grade)
 
   def self.all
     # retrieve all the rows from the "Students" database
