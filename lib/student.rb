@@ -24,6 +24,7 @@ class Student
   
   def self.create(name:, grade:)
     new_student = self.new(name, grade)
+    
 
   def self.all
     # retrieve all the rows from the "Students" database
